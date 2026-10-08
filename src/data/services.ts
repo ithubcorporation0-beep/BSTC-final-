@@ -2,7 +2,7 @@ import { Service } from "@/types/content";
 
 /**
  * Static Service Catalog.
- * Contains all 14 corporate, taxation, and registration services offered by BSTC.
+ * Contains all 28 corporate, taxation, US corporate, and IT & digital services offered by BSTC.
  * 
  * Note: Following strict project rules, template descriptions and fake legal steps have
  * been excluded. Unverified fields are marked with TODO(O1) awaiting authentic client input.
@@ -233,6 +233,393 @@ export const services: Service[] = [
     category: "tax-corporate",
   },
   {
+    slug: "llc-corporation-formation",
+    title: "LLC & Corporation Formation",
+    icon: "Building2",
+    desc: "Form your US LLC or C-Corp in Wyoming, Delaware, Florida, Texas, and other top states with complete formation documents.",
+    fullDesc:
+      "Launching a US business entity provides international entrepreneurs, e-commerce brands, and expanding companies with unmatched credibility, access to the global financial system, and limited liability protection. Whether establishing a single-member LLC, multi-member LLC, or C-Corporation, our US corporate services practice handles the entire formation process from name reservation to final state certificate issuance.\n\nWe assist non-resident and resident founders across high-demand states such as Wyoming, Delaware, New Mexico, Florida, and Texas. Our corporate specialists prepare customized Articles of Organization, Certificates of Incorporation, Operating Agreements, and corporate bylaws that ensure your company is structured soundly for international trade, e-commerce, and investment.",
+    benefits: [
+      "Formations Across All 50 States (Specializing in Wyoming, Delaware, Florida & Texas)",
+      "Comprehensive Articles of Organization & Customized Operating Agreements",
+      "100% Remote Non-Resident Setup with Zero US Travel Required",
+      "Complete Corporate Kit: Member Certificates, Resolution Docs & Digital Seal",
+    ],
+    reqDocs: [
+      "Valid Passport Copy (Government-issued photographic identification)",
+      "Proposed Company Legal Names (Primary choice and alternative options)",
+      "Target State of Formation & Designated Business Industry / Activity",
+      "Beneficial Owner(s) Full Legal Names, Physical Residential Addresses & Equity Split",
+    ],
+    process: [
+      "Jurisdiction & Entity Selection: Consulting on state tax laws, annual fees, and choosing LLC vs. C-Corp.",
+      "Name Availability Search: Verifying trademark and state registry uniqueness with the Secretary of State.",
+      "Document Drafting & State Filing: Submitting Articles of Organization or Certificate of Incorporation.",
+      "Operating Agreement & Bylaws: Drafting customized governance agreements and ownership resolutions.",
+      "Delivery of Approved Documents: Handover of certified state stamp documents, filing receipts, and corporate records.",
+    ],
+    faqs: [
+      {
+        q: "Which US state is best for non-residents: Wyoming or Delaware?",
+        a: "Wyoming is generally ideal for online businesses, Amazon/e-commerce sellers, and freelancers due to low annual state fees ($60/year) and strong privacy laws. Delaware is favored by venture-backed startups and businesses seeking institutional US investment.",
+      },
+      {
+        q: "Can a non-US resident own 100% of a US LLC without traveling to the United States?",
+        a: "Yes. Non-US residents can legally own and operate a US LLC remotely. There is no requirement for US citizenship, residency, or physical presence in the US.",
+      },
+    ],
+    seoTitle: "US LLC & Corporation Formation Services | Wyoming, Delaware, Texas | BSTC",
+    seoDesc:
+      "Complete US company registration for non-residents and global entrepreneurs. Fast LLC and C-Corp formation in Wyoming, Delaware, Florida, and all 50 states.",
+    status: "active",
+    order: 15,
+    category: "us-corporate",
+  },
+  {
+    slug: "ein-itin-services",
+    title: "EIN & ITIN Services",
+    icon: "FileText",
+    desc: "Federal Employer Identification Number (EIN) and Individual Taxpayer Identification Number (ITIN) procurement directly with the IRS.",
+    fullDesc:
+      "An Employer Identification Number (EIN) is the federal taxpayer identification number issued by the Internal Revenue Service (IRS) to identify a US business entity. It is mandatory for opening US business bank accounts, applying for Stripe or PayPal merchant processing, hiring contractors, and filing federal tax returns. For foreign founders without a Social Security Number (SSN), navigating Form SS-4 with the IRS can be complex and time-consuming.\n\nAdditionally, for foreign company owners, contractors, and individuals needing personal US tax identification, we manage certified ITIN (Individual Taxpayer Identification Number) applications through IRS Form W-7. Our team ensures error-free document preparation, expedited filing, and direct follow-up with IRS agents to secure your tax ID smoothly.",
+    benefits: [
+      "Official IRS EIN (Form SS-4) Processing for Non-US Residents Without an SSN",
+      "Certified Individual Taxpayer Identification Number (ITIN) Form W-7 Filing",
+      "Official 147C Letter & CP 575 Notice Verification for Financial Institutions",
+      "Direct Follow-up with IRS Representatives to Resolve Filings & Delays",
+    ],
+    reqDocs: [
+      "Approved State LLC / Corporate Articles of Organization & Filing Receipt",
+      "Passport Copy of Primary Responsible Party / Beneficial Owner",
+      "Signed IRS Form SS-4 Authorization (For EIN processing)",
+      "Certified Passport Copy & Valid US Tax Return / Exception Documentation (For ITIN)",
+    ],
+    process: [
+      "Application Verification: Auditing company details and drafting IRS Form SS-4 or Form W-7.",
+      "IRS Filing Submission: Lodging expedited applications via specialized international IRS processing channels.",
+      "IRS Agent Follow-Up: Tracking application progress through IRS tele-service queues to prevent processing holds.",
+      "Official Notice Issuance: Receiving your official IRS CP 575 or 147C EIN confirmation notice.",
+      "Client Delivery: Secure transmission of your official tax ID certificates for banking and gateway verification.",
+    ],
+    faqs: [
+      {
+        q: "How long does it take to obtain an EIN for a non-US resident without an SSN?",
+        a: "Because non-residents cannot use the IRS automated online portal, the IRS processes Form SS-4 via international fax or mail. Standard processing typically takes between 10 to 25 business days depending on IRS backlog.",
+      },
+      {
+        q: "What is the difference between an EIN and an ITIN?",
+        a: "An EIN (Employer Identification Number) is for your business entity and is required to open bank accounts and conduct trade. An ITIN is a personal tax processing number for individuals who do not qualify for an SSN but need to file US personal tax returns or claim tax treaty benefits.",
+      },
+    ],
+    seoTitle: "EIN & ITIN Services for US Companies & Non-Residents | IRS Form SS-4 | BSTC",
+    seoDesc:
+      "Secure your US Federal EIN (Employer Identification Number) and ITIN quickly. Expert IRS Form SS-4 and W-7 filing for US entities and international founders.",
+    status: "active",
+    order: 16,
+    category: "us-corporate",
+  },
+  {
+    slug: "registered-agent",
+    title: "Registered Agent",
+    icon: "ShieldCheck",
+    desc: "Reliable, year-round registered agent service providing official state addresses and immediate compliance notice scanning.",
+    fullDesc:
+      "Every US state legally mandates that registered limited liability companies and corporations maintain an active Registered Agent with a physical street address within the state of incorporation. Your Registered Agent is legally responsible for receiving government notices, legal process service (SOP), tax correspondence, and official state department filings during normal business hours.\n\nOur Registered Agent service provides a dependable, compliant physical presence in all 50 US states. We safeguard your personal privacy by keeping your personal residential address off public state registers, automatically digitizing all legal and state mail within 24 hours of receipt, and alerting you to upcoming state deadlines.",
+    benefits: [
+      "Compliant Physical Commercial Address in All 50 US States",
+      "Protects Personal Privacy by Keeping Home Address Off Public State Databases",
+      "Same-Day Document Digitization & High-Resolution Mail Scanning Portal",
+      "Immediate Notifications for Service of Process, Subpoenas & Official Legal Notices",
+    ],
+    reqDocs: [
+      "Legal Company Name & Target State of Incorporation",
+      "Primary Company Contact Name, Phone & Authorized Email Address",
+      "Current Articles of Organization (If transferring from an existing agent)",
+      "Designated Company Officer Signature for State Agency Filings",
+    ],
+    process: [
+      "Agent Appointment: Designating our certified commercial agent in your initial state incorporation or amendment filing.",
+      "Address Verification: Establishing your company's registered office address on official Secretary of State records.",
+      "Mail Monitoring & Ingestion: Receiving official government correspondence, lawsuits, and statutory notices.",
+      "Instant Scanning & Notification: Digitizing documents within 24 hours and sending immediate security alerts.",
+      "Annual Renewal & Continuity: Seamless annual renewal to ensure uninterrupted state standing.",
+    ],
+    faqs: [
+      {
+        q: "Can I be my own registered agent for my US LLC?",
+        a: "You can only act as your own registered agent if you reside physically in the state where the LLC is formed and have a physical street address open during regular business hours. For non-residents or founders wanting address privacy, a professional registered agent is legally essential.",
+      },
+      {
+        q: "Can I switch my current registered agent to BSTC's service?",
+        a: "Yes. We prepare and file the Change of Registered Agent amendment with the Secretary of State and take over mail receiving without any interruption to your business operations.",
+      },
+    ],
+    seoTitle: "US Registered Agent Services in All 50 States | Privacy & Compliance | BSTC",
+    seoDesc:
+      "Professional US Registered Agent services in Wyoming, Delaware, Florida, and all 50 states. Same-day digital mail scanning, state compliance, and address privacy.",
+    status: "active",
+    order: 17,
+    category: "us-corporate",
+  },
+  {
+    slug: "business-tax-filing",
+    title: "Business Tax Filing",
+    icon: "Receipt",
+    desc: "Federal and state corporate tax preparation for US LLCs, single-member foreign-owned LLCs (Form 5472/1120), and C-Corps.",
+    fullDesc:
+      "Navigating US federal tax obligations is critical for both domestic companies and foreign-owned US entities. The IRS enforces strict annual reporting requirements on foreign-owned Single-Member LLCs (disregarded entities) under Section 6038A, mandating Form 5472 and pro-forma Form 1120. Failure to submit or late submission of these informational returns carries severe statutory penalties starting at $25,000 per violation.\n\nOur US tax filing team prepares and lodges federal and state tax filings for LLCs (Partnership Form 1065, Foreign-Owned Form 5472/1120) and C-Corporations (Form 1120). We ensure accurate deduction accounting, cross-border withholding tax minimization, and complete compliance with US international tax codes.",
+    benefits: [
+      "Foreign-Owned Single-Member LLC Form 5472 & Form 1120 Pro-Forma Filings",
+      "Multi-Member LLC Partnership Returns (IRS Form 1065 & Partner Schedule K-1s)",
+      "Corporate Income Tax Return Preparation (IRS Form 1120) & State Returns",
+      "Tax Treaty Assessment & Avoidance of $25,000+ Non-Compliance IRS Penalties",
+    ],
+    reqDocs: [
+      "Annual General Ledger, Profit & Loss Statement, and Balance Sheet",
+      "Company EIN Notice (CP 575 or 147C Letter) and State Formation Documents",
+      "Record of Reportable Transactions Between Foreign Owner & US Entity",
+      "Prior Year Filed US Federal & State Tax Returns (If applicable)",
+    ],
+    process: [
+      "Financial Review & Classification: Analyzing company structure, residency status, and transaction history.",
+      "Transaction Auditing: Categorizing all capital contributions, distributions, and intercompany loans.",
+      "Tax Return Preparation: Drafting Forms 5472/1120, 1065, or 1120 with necessary schedules and disclosures.",
+      "Client Review & Sign-Off: Reviewing the draft return with founders and verifying treaty disclosures.",
+      "IRS Filing & Confirmation: Electronic filing or certified submission with proof of IRS receipt.",
+    ],
+    faqs: [
+      {
+        q: "Do foreign owners of a US LLC have to file US taxes if they have no US income?",
+        a: "Yes. Even if a foreign-owned Single-Member LLC generated $0 in revenue or conducted all operations outside the US, the IRS still mandates filing Form 5472 and Form 1120 pro-forma if reportable events (such as capital contributions or formation expenses) occurred. The penalty for non-filing is $25,000.",
+      },
+      {
+        q: "What is the annual federal filing deadline for a US LLC?",
+        a: "For Single-Member LLCs filing Form 5472/1120, the standard deadline is April 15th. For Multi-Member LLCs filing Form 1065, the deadline is March 15th. Timely extension requests (Form 7004) can grant an automatic 6-month extension.",
+      },
+    ],
+    seoTitle: "US Business Tax Filing & Form 5472 / 1120 Services | Foreign-Owned LLC | BSTC",
+    seoDesc:
+      "Professional US business tax filing for LLCs and C-Corps. Expert Form 5472 and pro-forma 1120 filing for foreign-owned entities to prevent $25,000 IRS penalties.",
+    status: "active",
+    order: 18,
+    category: "us-corporate",
+  },
+  {
+    slug: "bookkeeping-accounting",
+    title: "Bookkeeping & Accounting",
+    icon: "Calculator",
+    desc: "Full-cycle US bookkeeping, monthly financial reconciliation, QuickBooks/Xero setup, and tax-ready financial reporting.",
+    fullDesc:
+      "Maintaining structured, audit-ready financial books is vital for monitoring company cash flow, meeting US tax filing requirements, and providing transparent reports to banking partners and investors. Our US Bookkeeping & Accounting service delivers accurate, automated general ledger maintenance tailored to US accounting standards (US GAAP).\n\nWe connect directly to your US business bank accounts (Mercury, Relay, Wise, Brex), payment gateways (Stripe, PayPal, Authorize.net), and e-commerce platforms (Shopify, Amazon Seller Central). Our certified accountants reconcile transactions, track operating expenses, manage multi-currency exchange adjustments, and deliver monthly Profit & Loss statements and Balance Sheets.",
+    benefits: [
+      "Cloud Accounting Setup & Management (QuickBooks Online, Xero & Wave)",
+      "Monthly Bank, Credit Card & Merchant Account (Stripe, PayPal) Reconciliation",
+      "Real-Time Profit & Loss, Balance Sheet, and Cash Flow Statement Generation",
+      "Tax-Ready Year-End Books for Seamless Federal & State Tax Filing Preparation",
+    ],
+    reqDocs: [
+      "Bank Account & Credit Card Electronic Statements (.CSV or Read-Only Bank Feed)",
+      "Merchant Gateway Transaction Summaries (Stripe, PayPal, Shopify, Amazon)",
+      "Major Invoices, Vendor Receipts & Expense Documentation",
+      "Existing Chart of Accounts or Previous Year Accounting Ledger (If transitioning)",
+    ],
+    process: [
+      "Chart of Accounts Setup: Establishing a standardized US GAAP chart of accounts tailored to your industry.",
+      "Bank Feed & API Integration: Connecting secure read-only bank feeds and merchant processor reports.",
+      "Monthly Ledger Reconciliation: Categorizing transactions, fees, chargebacks, and operating disbursements.",
+      "Financial Statement Delivery: Compiling monthly P&L and Balance Sheet reports with executive summaries.",
+      "Year-End Tax Closing: Finalizing tax depreciation schedules, adjustments, and year-end trial balances.",
+    ],
+    faqs: [
+      {
+        q: "Which accounting software platforms do you support?",
+        a: "We primarily work with QuickBooks Online and Xero, which are the industry standards for US corporations. We also assist clients with Wave, FreshBooks, and custom ERP ledger integrations.",
+      },
+      {
+        q: "Can you reconcile high-volume Stripe, Shopify, or Amazon transactions?",
+        a: "Yes. We specialize in high-transaction e-commerce and SaaS accounting, utilizing automated batch settlement feeds to properly record gross sales, merchant processing fees, refunds, and sales taxes.",
+      },
+    ],
+    seoTitle: "US Corporate Bookkeeping & Accounting Services | QuickBooks & Xero | BSTC",
+    seoDesc:
+      "Accurate monthly bookkeeping and accounting for US LLCs and corporations. Bank reconciliation, P&L generation, and tax-ready books for global entrepreneurs.",
+    status: "active",
+    order: 19,
+    category: "us-corporate",
+  },
+  {
+    slug: "sales-tax-services",
+    title: "Sales Tax Services",
+    icon: "Percent",
+    desc: "State sales tax registration, economic nexus analysis, exemption certificates, and monthly/quarterly state return filing.",
+    fullDesc:
+      "In the United States, sales tax is governed at the state and municipal levels rather than by the federal government. Following the landmark Supreme Court Wayfair ruling, out-of-state businesses, Amazon FBA sellers, and e-commerce brands establishing economic nexus (exceeding state revenue or transaction thresholds) are legally required to collect and remit sales tax.\n\nOur US Sales Tax practice helps businesses monitor their state-by-state economic nexus exposure, register for state sales tax permits with state departments of revenue, configure automated tax collection rules on platforms like Shopify and WooCommerce, and file periodic (monthly, quarterly, or annual) sales tax returns with zero compliance headaches.",
+    benefits: [
+      "Comprehensive State-by-State Economic Nexus Threshold Audits",
+      "State Sales Tax Permit Registration with State Departments of Revenue",
+      "Automated Rate Configuration for Shopify, WooCommerce, Amazon & Stripe Tax",
+      "Timely Preparation & Electronic Submission of Periodic State Sales Tax Returns",
+    ],
+    reqDocs: [
+      "Company EIN Notice, State Formation Certificate & Registered Office Address",
+      "State-by-State Sales Revenue & Transaction Count Breakdowns (Past 12 Months)",
+      "E-Commerce Store URL & List of Fulfilment Center / Warehouse Locations",
+      "Primary Owner / Officer Identification and Contact Information",
+    ],
+    process: [
+      "Nexus Exposure Evaluation: Assessing whether your sales volume triggers tax collection duties in specific states.",
+      "State Tax Permit Registration: Procuring sales tax license numbers directly from state revenue departments.",
+      "Platform Tax Rule Setup: Configuring automated sales tax calculation rules across your online store.",
+      "Return Preparation & Calculation: Reconciling collected taxes against gross and exempt sales figures.",
+      "Timely Return Filing: Submitting periodic state filings and coordinating electronic payment transfers.",
+    ],
+    faqs: [
+      {
+        q: "What is economic nexus and when does my business need to collect US sales tax?",
+        a: "Economic nexus occurs when an out-of-state business exceeds a state's economic threshold (commonly $100,000 in gross sales or 200 separate transactions in a calendar year). Once crossed, you must register, collect, and remit sales tax in that state.",
+      },
+      {
+        q: "Does Amazon or Shopify collect sales tax on my behalf?",
+        a: "Amazon acts as a Marketplace Facilitator and collects/remits sales tax for sales conducted on Amazon in most states. However, for direct-to-consumer sales on your own website (Shopify/WooCommerce), your business is directly responsible for registering and remitting.",
+      },
+    ],
+    seoTitle: "US State Sales Tax Services & Nexus Compliance | E-Commerce Sales Tax | BSTC",
+    seoDesc:
+      "Complete US sales tax compliance, economic nexus analysis, state tax permit registration, and monthly filing for e-commerce stores and global sellers.",
+    status: "active",
+    order: 20,
+    category: "us-corporate",
+  },
+  {
+    slug: "annual-compliance",
+    title: "Annual Compliance",
+    icon: "Calendar",
+    desc: "Maintain Good Standing status with timely state annual reports, franchise tax payments, and corporate records maintenance.",
+    fullDesc:
+      "Keeping a US business in legal 'Good Standing' requires continuous adherence to state statutory mandates. Most US states require active LLCs and corporations to file an Annual Report or Periodic Report and pay an accompanying state franchise tax or filing fee. Missing these statutory deadlines leads to steep administrative late fees, penalty interest, and ultimately the administrative forfeiture and dissolution of your entity.\n\nOur Annual Compliance service takes the burden of tracking state calendars off your shoulders. We track renewal deadlines across all jurisdictions, prepare mandatory officer and address disclosure reports, calculate franchise tax dues, file required state paperwork, and procure official Certificates of Good Standing whenever required by banks or investors.",
+    benefits: [
+      "Never Miss a Deadline: Automated State Calendar Tracking & Advance Reminders",
+      "Preparation & Electronic Filing of Annual Reports Across All 50 States",
+      "Wyoming Annual License Tax & Delaware Franchise Tax Calculation & Payment",
+      "Expedited Issuance of Official Secretary of State Certificates of Good Standing",
+    ],
+    reqDocs: [
+      "State Entity Filing Number & Approved Articles of Organization",
+      "Current Business Physical Address & Registered Agent Information",
+      "Updated Roster of Members, Managers, Officers, or Directors",
+      "Total Asset Valuation or Authorized Share Count (For Delaware franchise tax)",
+    ],
+    process: [
+      "Entity Audit & Status Check: Verifying active standing on the Secretary of State public registry.",
+      "State Fee & Tax Calculation: Computing applicable annual license fees or franchise tax liability.",
+      "Report Preparation: Updating mandatory corporate disclosures, officer lists, and agent details.",
+      "State Submission: Lodging electronic annual filings before the state statutory deadline.",
+      "Confirmation & Record Keeping: Archiving state acceptance receipts and updated certificates.",
+    ],
+    faqs: [
+      {
+        q: "What happens if my US company fails to file its annual report?",
+        a: "If you fail to file, the state imposes punitive late penalties and eventually places your entity into 'Delinquent' or 'Administrative Dissolution' status. Once dissolved, your company loses legal limited liability protection and banking access will be frozen.",
+      },
+      {
+        q: "What is a Certificate of Good Standing and why do I need one?",
+        a: "A Certificate of Good Standing is an official document issued by the Secretary of State proving that your entity is legally registered, up to date on all annual reports and taxes, and authorized to conduct business. Banks, payment processors, and foreign governments routinely require it.",
+      },
+    ],
+    seoTitle: "US LLC Annual Compliance & Franchise Tax Filing Services | BSTC",
+    seoDesc:
+      "Maintain Good Standing for your US entity. Timely annual report filings, Wyoming license tax, Delaware franchise tax, and Certificate of Good Standing procurement.",
+    status: "active",
+    order: 21,
+    category: "us-corporate",
+  },
+  {
+    slug: "business-bank-account",
+    title: "Business Bank Account Assistance",
+    icon: "Landmark",
+    desc: "Remote US corporate bank account opening guidance for global founders with top fintechs like Mercury, Relay, and Wise.",
+    fullDesc:
+      "Access to the US banking system is essential for collecting customer payments, integrating merchant gateways (Stripe, PayPal, Shopify Payments), and paying international vendors without excessive foreign exchange fees. However, traditional US brick-and-mortar banks typically require founders to visit a physical branch in person with a US visa.\n\nWe assist international entrepreneurs and non-resident company owners in successfully opening FDIC-insured US corporate bank accounts remotely through premier US fintech banking platforms, including Mercury, Relay Financial, and Wise Business. We review your entity documentation, prepare compliant business descriptions and proof of operations, and guide you through compliance verification to maximize account approval rates.",
+    benefits: [
+      "100% Remote US Corporate Bank Account Application Assistance (No US Visit Required)",
+      "Partner Guidance for Leading FDIC-Insured Platforms: Mercury, Relay, Wise & Brex",
+      "Full Preparation of Corporate Verifications, KYC Profiles & Business Activity Proof",
+      "Seamless Integration Guidance for Stripe, PayPal, Amazon, and International Wire Rails",
+    ],
+    reqDocs: [
+      "Certified Articles of Organization / Formation Certificate with State Seal",
+      "Official IRS EIN Notice (CP 575 or 147C Letter)",
+      "Operating Agreement Signed by All Beneficial Owners",
+      "Valid Passport Copy & Active Commercial Website URL or Proof of Business Operations",
+    ],
+    process: [
+      "Banking Eligibility Review: Reviewing company activities, restricted industries, and ownership structures.",
+      "Documentation Package Preparation: Assembling certified corporate kits, EIN confirmation, and operating bylaws.",
+      "Commercial Profile Structuring: Drafting compliant business model descriptions, target vendor/customer profiles.",
+      "Application Lodgement: Assisting in submitting applications to Mercury, Relay, or Wise Business.",
+      "Post-Approval Setup: Guiding wire transfer activation, virtual debit card issuance, and Stripe/payment gateway sync.",
+    ],
+    faqs: [
+      {
+        q: "Do I need to visit the United States to open a business bank account?",
+        a: "No. Through modern US commercial banking partners such as Mercury and Relay Financial, non-resident founders can open fully operational, FDIC-insured US business bank accounts completely online without visiting the US.",
+      },
+      {
+        q: "Is money held in US fintech accounts insured?",
+        a: "Yes. Modern business banking platforms like Mercury and Relay partner with member FDIC banks (such as Choice Financial Group, Evolve Bank & Trust, or Thread Bank), providing standard FDIC insurance coverage up to $250,000 to several million dollars through sweep networks.",
+      },
+    ],
+    seoTitle: "US Business Bank Account Assistance for Non-Residents | Mercury & Relay | BSTC",
+    seoDesc:
+      "Open a US corporate bank account remotely with Mercury, Relay Financial, and Wise. Expert guidance for non-residents and foreign founders with 100% remote setup.",
+    status: "active",
+    order: 22,
+    category: "us-corporate",
+  },
+  {
+    slug: "business-consulting",
+    title: "Business Consulting",
+    icon: "TrendingUp",
+    desc: "Strategic advisory on cross-border business structuring, merchant gateway compliance, international contracts, and market entry.",
+    fullDesc:
+      "Entering the US marketplace and expanding internationally requires strategic planning across corporate structuring, payment gateway compliance, tax optimization, and operational efficiency. Many overseas founders encounter unexpected hurdles when attempting to scale e-commerce stores, SaaS applications, or agency services due to banking restrictions, merchant account holds, or mismatched corporate entities.\n\nOur US Business Consulting practice pairs international entrepreneurs with seasoned advisors to structure sound, future-proof cross-border operations. From selecting the ideal corporate structure for venture funding to establishing compliant Stripe merchant workflows, drafting contractor agreements, and optimizing global supply chain logistics, we provide actionable guidance that turns international aspirations into sustainable commercial growth.",
+    benefits: [
+      "Custom Cross-Border Corporate Structuring & Entity Optimization",
+      "Merchant Gateway (Stripe, PayPal, Authorize.net) Approval & Risk Mitigation Advisory",
+      "Cross-Border Contractor Agreements, NDAs & Commercial Terms Drafting Guidance",
+      "Strategic Market Entry Roadmaps for SaaS, E-Commerce, and Export Businesses",
+    ],
+    reqDocs: [
+      "Summary of Existing Business Model, Current Revenue & Target Geographic Markets",
+      "Overview of Planned US Activities, Product Offerings & Supply Chain Logistics",
+      "Current Corporate Entity Records (If already incorporated in the US or overseas)",
+      "Specific Operational Challenges or Strategic Questions for the Consultation",
+    ],
+    process: [
+      "Discovery & Goals Assessment: Deep dive into your business model, products, and commercial objectives.",
+      "Cross-Border Strategy Formulation: Designing the optimal legal, banking, and payment gateway architecture.",
+      "Risk Analysis & Compliance Mapping: Identifying potential banking triggers, tax considerations, and regulatory hurdles.",
+      "Implementation Roadmap: Delivering a step-by-step action plan with vendor recommendations and procedural templates.",
+      "Follow-Through & Advisory Support: Ongoing advisory sessions to guide execution, resolve roadblocks, and review metrics.",
+    ],
+    faqs: [
+      {
+        q: "Can you help unfreeze or set up a compliant US Stripe or PayPal account?",
+        a: "Yes. We advise clients on the exact corporate, identity, and operational requirements required by major merchant aggregators, helping you establish compliant business verification to minimize account flags and holds.",
+      },
+      {
+        q: "Is this consulting suitable for early-stage startups and solo entrepreneurs?",
+        a: "Absolutely. We work with solo freelancers, e-commerce drop-shippers, digital marketing agencies, SaaS founders, and established manufacturers looking to establish a legitimate US presence.",
+      },
+    ],
+    seoTitle: "US Business Consulting & Cross-Border Advisory | Market Entry | BSTC",
+    seoDesc:
+      "Strategic US business consulting for global entrepreneurs. Cross-border entity structuring, payment gateway compliance, and international expansion guidance.",
+    status: "active",
+    order: 23,
+    category: "us-corporate",
+  },
+  {
     slug: "software-solutions",
     title: "Custom Software Solutions",
     icon: "Code2",
@@ -272,7 +659,7 @@ export const services: Service[] = [
     seoDesc:
       "Tailored software development, custom ERP systems, cloud-native applications, and workflow automation designed for modern scalable businesses.",
     status: "active",
-    order: 15,
+    order: 24,
     category: "it-digital",
   },
   {
@@ -315,7 +702,7 @@ export const services: Service[] = [
     seoDesc:
       "Custom corporate website design, modern web development, responsive UX/UI, and high-performance business web solutions in Pakistan.",
     status: "active",
-    order: 16,
+    order: 25,
     category: "it-digital",
   },
   {
@@ -358,7 +745,7 @@ export const services: Service[] = [
     seoDesc:
       "Results-driven digital marketing, Google Ads, SEO optimization, and social media marketing to boost leads, conversions, and revenue.",
     status: "active",
-    order: 17,
+    order: 26,
     category: "it-digital",
   },
   {
@@ -401,7 +788,7 @@ export const services: Service[] = [
     seoDesc:
       "Creative logo design, corporate brand identity, marketing collaterals, and digital visuals engineered to elevate your brand prestige.",
     status: "active",
-    order: 18,
+    order: 27,
     category: "it-digital",
   },
   {
@@ -444,7 +831,7 @@ export const services: Service[] = [
     seoDesc:
       "High-converting e-commerce online stores for businesses all over the world, secure international payment gateway integrations, and automated inventory management.",
     status: "active",
-    order: 19,
+    order: 28,
     category: "it-digital",
   },
 ];

@@ -23,9 +23,9 @@ export const homeContent: HomeContent = {
   about: {
     title: "About Business Solutions Tax Consultants",
     intro:
-      "BSTC is a full-service advisory firm providing professional tax consultancy, corporate registration, business solutions, and innovative IT & digital services across Pakistan. Led by experienced professionals, we help businesses simplify compliance, improve efficiency, and grow with confidence.",
+      "BSTC is a full-service advisory firm providing professional tax consultancy, SECP company registrations, US corporate formations, and innovative IT & digital solutions. Led by experienced professionals, we help businesses simplify compliance, improve efficiency, and grow with confidence.",
     desc:
-      "For over two decades, BSTC has helped salaried individuals, freelancers, commercial traders, startups, and established enterprises navigate tax compliance, SECP company registrations, bookkeeping, and financial reporting with total confidence.\n\nTo accelerate your business in today's digital economy, we also provide full-suite IT & Digital Services — including custom software development, modern high-converting websites, digital marketing & SEO, brand identity design, and scalable e-commerce solutions. From legal incorporation to digital market leadership, BSTC is your all-in-one business growth partner.",
+      "For over two decades, BSTC has helped salaried individuals, freelancers, commercial traders, startups, and established enterprises navigate tax compliance, SECP registrations, US LLC formations, corporate bookkeeping, and financial reporting with total confidence.\n\nTo accelerate your business in today's global and digital economy, we also provide full-suite US Corporate Services (LLCs, EINs, banking, and compliance) and cutting-edge IT & Digital Solutions — including custom software development, modern high-converting websites, digital marketing & SEO, brand identity design, and scalable e-commerce solutions. From legal incorporation to digital market leadership, BSTC is your all-in-one business growth partner.",
     img: "/images/bstc-logo-badge.svg",
     cards: [
       {
@@ -33,8 +33,8 @@ export const homeContent: HomeContent = {
         desc: "Direct advisory by certified Income Tax Practitioners registered with regulatory authorities.",
       },
       {
-        title: "End-to-End Corporate Compliance",
-        desc: "From NTN issuance and provincial sales tax to annual auditing and corporate SECP filings.",
+        title: "Domestic & US Corporate Services",
+        desc: "From NTN issuance and SECP registrations to US LLC formations, EINs, and bank accounts.",
       },
       {
         title: "Comprehensive IT & Digital Solutions",
@@ -102,6 +102,10 @@ export const homeContent: HomeContent = {
     {
       q: "What IT and digital solutions does BSTC offer to businesses?",
       a: "Beyond tax and corporate advisory, BSTC provides full-spectrum enterprise IT services: custom software solutions and ERP development, modern responsive websites, digital marketing and SEO campaigns, graphic design and branding, and e-commerce platforms serving businesses all over the world.",
+    },
+    {
+      q: "Can BSTC assist non-residents with US LLC formation and business bank accounts?",
+      a: "Yes. We offer end-to-end US Corporate Services for international and non-resident founders — including LLC and C-Corp formation (Wyoming, Delaware, Florida, etc.), IRS EIN/ITIN procurement, Registered Agent services, remote business bank account opening (Mercury, Relay, Wise), and annual compliance filing.",
     },
   ],
   testimonials: [

@@ -57,7 +57,8 @@ function YoutubeIcon({ className = "" }: { className?: string }) {
 
 export function Footer() {
   const allServices = getActiveServices();
-  const taxServices = allServices.filter((s) => s.category !== "it-digital").slice(0, 5);
+  const taxServices = allServices.filter((s) => s.category === "tax-corporate").slice(0, 5);
+  const usServices = allServices.filter((s) => s.category === "us-corporate").slice(0, 5);
   const itServices = allServices.filter((s) => s.category === "it-digital").slice(0, 5);
 
   const quickLinks = [
@@ -84,7 +85,7 @@ export function Footer() {
     <footer className="border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 text-slate-600 dark:text-slate-400">
       {/* Top Main Footer Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-10">
           {/* Column 1: Company Info & Branding */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded-xl p-1">
@@ -158,7 +159,27 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: IT & Digital Solutions */}
+          {/* Column 3: US Corporate Services */}
+          <div>
+            <h3 className="font-display font-bold text-base text-ink mb-4">
+              US Corporate Services
+            </h3>
+            <ul className="space-y-2.5 text-sm">
+              {usServices.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="hover:text-royal dark:hover:text-royal-light transition-colors flex items-center gap-1.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-royal rounded p-0.5"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 text-blue-500 group-hover:text-royal group-hover:translate-x-0.5 transition-all" />
+                    <span>{service.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: IT & Digital Solutions */}
           <div>
             <h3 className="font-display font-bold text-base text-ink mb-4">
               IT &amp; Digital Solutions
@@ -178,7 +199,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Office */}
+          {/* Column 5: Contact & Office */}
           <div>
             <h3 className="font-display font-bold text-base text-ink mb-4">
               Offices &amp; Inquiries

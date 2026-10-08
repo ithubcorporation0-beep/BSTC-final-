@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, Phone, MessageSquare, ShieldCheck, CheckCircle2, Sparkles } from "lucide-react";
+import { ArrowRight, Phone, MessageSquare, ShieldCheck, CheckCircle2, Sparkles, Globe } from "lucide-react";
 import { siteSettings } from "@/data/settings";
 import { Service } from "@/types/content";
 import { getServiceBySlug } from "@/data";
@@ -22,6 +22,7 @@ export function ServiceSidebar({
 
   const currentService = getServiceBySlug(currentSlug);
   const isIT = currentService?.category === "it-digital";
+  const isUS = currentService?.category === "us-corporate";
 
   // Prioritize related services from the same category
   const sortedRelated = [...relatedServices].sort((a, b) => {
@@ -41,6 +42,11 @@ export function ServiceSidebar({
                 <Sparkles className="w-3.5 h-3.5 text-lime-bright" />
                 <span>Modern Technology Advisory</span>
               </>
+            ) : isUS ? (
+              <>
+                <Globe className="w-3.5 h-3.5 text-lime-bright" />
+                <span>US Corporate Specialist</span>
+              </>
             ) : (
               <>
                 <ShieldCheck className="w-3.5 h-3.5 text-lime-bright" />
@@ -50,12 +56,18 @@ export function ServiceSidebar({
           </div>
 
           <h3 className="font-display font-extrabold text-2xl text-white leading-tight">
-            {isIT ? "Ready to Build Your Solution?" : "Need Expert Assistance?"}
+            {isIT
+              ? "Ready to Build Your Solution?"
+              : isUS
+              ? "Start Your US Business Today"
+              : "Need Expert Assistance?"}
           </h3>
 
           <p className="text-xs sm:text-sm text-blue-100 leading-relaxed">
             {isIT
               ? "Accelerate your business with bespoke software, high-performing websites, and high-ROI digital campaigns tailored to your goals."
+              : isUS
+              ? "Form your US LLC or Corporation, obtain your EIN/ITIN, and open a business bank account remotely with complete regulatory compliance."
               : "Avoid penalties, notices, and procedural delays. Our certified tax practitioners handle your filing with 100% legal compliance."}
           </p>
         </div>
@@ -68,7 +80,11 @@ export function ServiceSidebar({
             className="w-full justify-center text-slate-950 font-bold"
             icon={<ArrowRight className="w-4 h-4" />}
           >
-            {isIT ? "Request Project Consultation" : "Book Free Consultation"}
+            {isIT
+              ? "Request Project Consultation"
+              : isUS
+              ? "Start US Formation"
+              : "Book Free Consultation"}
           </Button>
 
           <a

@@ -96,11 +96,22 @@ export function getServiceJsonLd(service: Service) {
       name: siteSettings.companyName,
       url: siteUrl,
     },
-    serviceType: "Tax & Corporate Consultancy",
-    areaServed: {
-      "@type": "Country",
-      name: "Pakistan",
-    },
+    serviceType:
+      service.category === "it-digital"
+        ? "IT & Digital Services"
+        : service.category === "us-corporate"
+        ? "US Corporate & International Business Services"
+        : "Tax & Corporate Consultancy",
+    areaServed:
+      service.category === "us-corporate"
+        ? [
+            { "@type": "Country", name: "United States" },
+            { "@type": "Country", name: "Pakistan" },
+          ]
+        : {
+            "@type": "Country",
+            name: "Pakistan",
+          },
   };
 }
 

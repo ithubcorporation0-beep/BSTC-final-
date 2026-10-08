@@ -103,9 +103,9 @@ export interface Service {
   order: number;
 
   /**
-   * Service category classification (e.g. "tax-corporate" or "it-digital").
+   * Service category classification (e.g. "tax-corporate", "us-corporate", or "it-digital").
    */
-  category?: "tax-corporate" | "it-digital" | string;
+  category?: "tax-corporate" | "us-corporate" | "it-digital" | string;
 
   /**
    * Optional custom banner image path (e.g. "/images/services/income-tax.jpg").

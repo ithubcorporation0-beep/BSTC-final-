@@ -11,12 +11,24 @@ export { services, team, homeContent, siteSettings };
  */
 export function getServiceBySlug(slug: string): Service | undefined {
   const s = slug.toLowerCase();
-  return services.find(
-    (item) =>
-      item.slug.toLowerCase() === s ||
-      (item.slug.toLowerCase() === "software-solutions" && s === "custom-software-solutions") ||
-      (item.slug.toLowerCase() === "custom-software-solutions" && s === "software-solutions")
-  );
+  return services.find((item) => {
+    const isExact = item.slug.toLowerCase() === s;
+    if (isExact) return true;
+
+    // Backward-compatible and friendly slug aliases
+    if (item.slug === "software-solutions" && s === "custom-software-solutions") return true;
+    if (item.slug === "llc-corporation-formation" && (s === "us-llc" || s === "us-llc-formation" || s === "llc-formation")) return true;
+    if (item.slug === "ein-itin-services" && (s === "ein-itin" || s === "us-ein" || s === "itin-services")) return true;
+    if (item.slug === "registered-agent" && s === "registered-agent-services") return true;
+    if (item.slug === "business-tax-filing" && (s === "us-tax-filing" || s === "us-business-tax")) return true;
+    if (item.slug === "bookkeeping-accounting" && (s === "us-bookkeeping" || s === "us-accounting")) return true;
+    if (item.slug === "sales-tax-services" && (s === "us-sales-tax" || s === "us-sales-tax-services")) return true;
+    if (item.slug === "annual-compliance" && (s === "us-annual-compliance" || s === "annual-reports")) return true;
+    if (item.slug === "business-bank-account" && (s === "us-bank-account" || s === "business-bank-account-assistance")) return true;
+    if (item.slug === "business-consulting" && (s === "us-business-consulting" || s === "us-consulting")) return true;
+
+    return false;
+  });
 }
 
 /**

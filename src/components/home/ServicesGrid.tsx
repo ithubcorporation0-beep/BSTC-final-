@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import { ArrowRight, Sparkles, Building2, Code2 } from "lucide-react";
+import { ArrowRight, Sparkles, Building2, Globe, Code2 } from "lucide-react";
 import { getActiveServices } from "@/data";
 import Section from "@/components/ui/Section";
 import Card from "@/components/ui/Card";
 import Icon from "@/components/ui/Icon";
 import Reveal from "@/components/ui/Reveal";
 
-type CategoryFilter = "all" | "tax-corporate" | "it-digital";
+type CategoryFilter = "all" | "tax-corporate" | "us-corporate" | "it-digital";
 
 export function ServicesGrid() {
   const allServices = getActiveServices();
@@ -16,18 +16,17 @@ export function ServicesGrid() {
 
   const filteredServices = useMemo(() => {
     if (activeCategory === "all") return allServices;
-    if (activeCategory === "it-digital") {
-      return allServices.filter((s) => s.category === "it-digital");
-    }
-    return allServices.filter((s) => s.category !== "it-digital");
+    return allServices.filter((s) => s.category === activeCategory);
   }, [allServices, activeCategory]);
 
   const counts = useMemo(() => {
+    const taxCount = allServices.filter((s) => s.category === "tax-corporate").length;
+    const usCount = allServices.filter((s) => s.category === "us-corporate").length;
     const itCount = allServices.filter((s) => s.category === "it-digital").length;
-    const taxCount = allServices.filter((s) => s.category !== "it-digital").length;
     return {
       all: allServices.length,
       tax: taxCount,
+      us: usCount,
       it: itCount,
     };
   }, [allServices]);
@@ -37,7 +36,7 @@ export function ServicesGrid() {
       id="services"
       eyebrow="Our Practice Areas"
       heading="Full-Spectrum Corporate, Tax & Technology Solutions"
-      description="From FBR tax filings and SECP company registrations to custom software development, modern websites, and performance digital marketing."
+      description="From FBR tax filings and SECP registrations to US corporate formations, custom software development, modern websites, and performance digital marketing."
       centered
       className="py-20 lg:py-28"
     >
@@ -89,6 +88,28 @@ export function ServicesGrid() {
 
         <button
           type="button"
+          onClick={() => setActiveCategory("us-corporate")}
+          className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
+            activeCategory === "us-corporate"
+              ? "bg-royal text-white shadow-soft scale-105"
+              : "bg-slate-100 dark:bg-slate-850 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800"
+          }`}
+        >
+          <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-300" />
+          <span>US Corporate</span>
+          <span
+            className={`ml-1 text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded-full font-extrabold ${
+              activeCategory === "us-corporate"
+                ? "bg-white/20 text-white"
+                : "bg-slate-200 dark:bg-slate-750 text-slate-700 dark:text-slate-300"
+            }`}
+          >
+            {counts.us}
+          </span>
+        </button>
+
+        <button
+          type="button"
           onClick={() => setActiveCategory("it-digital")}
           className={`flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
             activeCategory === "it-digital"
@@ -114,6 +135,7 @@ export function ServicesGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
         {filteredServices.map((service, index) => {
           const isIT = service.category === "it-digital";
+          const isUS = service.category === "us-corporate";
 
           return (
             <Reveal
@@ -136,10 +158,12 @@ export function ServicesGrid() {
                       className={`text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full border ${
                         isIT
                           ? "bg-lime-50 dark:bg-lime-950/40 text-lime-800 dark:text-lime-300 border-lime-200 dark:border-lime-800/60"
+                          : isUS
+                          ? "bg-blue-50 dark:bg-blue-950/40 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800/60"
                           : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700"
                       }`}
                     >
-                      {isIT ? "Technology" : "Corporate"}
+                      {isIT ? "Technology" : isUS ? "US Corporate" : "Corporate"}
                     </span>
                   </div>
 
